@@ -1,11 +1,17 @@
- <%= form_for @product do |f| %>
+ <%= form_for @product, html: {multipart: true} do |f| %>
 
-  <%= f.label :product_name %>
-  <%= f.text_field :product_name, placeholder: 'Product name here' %>
+	<%= f.label :product_name %>
+	<%= f.text_field :product_name, placeholder: 'Product name here' %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description, placeholder: 'Description here' %> 
+	<%= f.label :description %>
+	<%= f.text_field :description, placeholder: 'Description here' %> 
 
-  <%= f.submit "Create Candy"%>
+	<%= f.label :image %>
+	<%= f.file_field :image %> 
+
+
+	<%= f.submit "Create Candy"%>
 
 <% end %>
+
+

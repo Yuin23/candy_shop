@@ -1,5 +1,19 @@
 require 'spec_helper'
 
 describe Product do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+	it 'can have an attached product image' do
+		product = Product.create image: test_image
+		expect(product.image.exists?).to be_true	
+	end	
+
+	it 'can have an thumbnail' do 
+		product = Product.create image: test_image
+		expect(product.image.exists?(:thumb)).to be_true 
+	end 
+
 end
+
+
+
+

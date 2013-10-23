@@ -18,7 +18,6 @@ describe 'products page' do
 end 
 
 describe 'new page' do
-
 	  
 	it 'should create a product' do 
 		visit new_product_path
@@ -26,15 +25,13 @@ describe 'new page' do
 		  within '.new_product' do
 		  	fill_in 'Product name', with: 'New Candy'
 		  	fill_in 'Description', with: 'A lot of sugar'
+		  	fill_in 'Price', with: '8.00'
 		  	click_button "Create Candy"
 		  end	
 
 	expect(current_url).to eq url_for(Product.last)
 	expect(page).to have_content 'New Candy'
-    expect(page).to have_content 'A lot of sugar'		
-	end 
-
-
+    expect(page).to have_content 'A lot of sugar'
+    expect(page).to have_content '8.00'				
+	end
 end 
-
-	
