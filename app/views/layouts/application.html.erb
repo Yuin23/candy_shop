@@ -65,7 +65,7 @@
         <div class="col-md-3">
           <div class="well sidebar-nav">
             <div class='item_count'>
-            <%= pluralize current_cart.count, 'item' %>
+            <%= link_to pluralize(current_cart.count, 'item'), current_cart %>
             </div>
             <h3>Sidebar</h3>
             <ul class="nav nav-list">
