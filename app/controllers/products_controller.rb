@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     end
 
     def create
-    	@product = Product.create(params[:product].permit(:product_name, :description, :image))    
+    	@product = Product.create(params[:product].permit(:product_name, :description, :image, :price))    
     	redirect_to @product		
 
     rescue AWS::S3::Errors::RequestTimeout

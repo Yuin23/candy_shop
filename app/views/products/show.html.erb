@@ -1,5 +1,6 @@
 <%= @product.product_name %><br>
-<%= @product.description %>
+<%= @product.description %><br>
+<%= number_to_currency(@product.price, precision: 2) %>
 <%= image_tag @product.image.url(:thumb), class: 'product_image'%>
 
 <% form_for current_cart do |f| %>
