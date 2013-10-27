@@ -1,7 +1,9 @@
 <% if current_cart.products.any? %>
 	<% current_cart.products.each do |product| %>
 		<%= product.product_name %>
+		<%= product.price %><br>
 	<% end %>
 <% else %>
 	<h3>No products</h3>
 <% end %>
+<h2>Total amount: <strong><%= current_cart.products.sum(:price) %>GBP</strong>.</h2>

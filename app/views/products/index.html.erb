@@ -3,16 +3,14 @@
 		<h1>Products</h1>
 		<p>
 <% @products.each do |product| %>
-
 	<%= link_to product.product_name, product %> 
-
+    <div class="price">Price in GBP: <%= "#{product.price}" %></div>
 <% end %>
 		</p>
 	
 	</div>
-	<div class='col-md-8 placeholder-image'>
-	     <img src="http://images5.fanpop.com/image/photos/30400000/Candy-candy-30424649-1920-1200.jpg" class="img-circle">
-	  
-	</div>
 
 </div>
+
+
+
